@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Jazz Club</title>
+<link href="site.css" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+	<a href = "index.html">Home</a> &nbsp;
+	<a href ="music.html">Music</a>&nbsp;
+	<a href = "soulfood.html">Services</a> &nbsp;
+	<a href ="contact.html">Contact</a>&nbsp;
+	
+
+
+
+
+</nav>
+<img class="mySlides" src="images/image19.jpg" style="width:100%">
+  <img class="mySlides" src="images/image20.jpg" style="width:100%">
+  <img class="mySlides" src="images/image21.jpg" style="width:100%">
+  <img class="mySlides" src="images/image22.png" style="width:100%">
+  <img class="mySlides" src="images/image23.jpg" style="width:100%">
+  <img class="mySlides" src="images/image24.jpg" style="width:100%">
+<h1>Nosoul Presents</h1>
+<h2> The Sound</h2>
+<h2>Legends at The Smooth</h2>
+ 
+  <p id="para" onmouseover="changeBackground()" onmouseout="backToNormal()">We at The Smooth want to share great music to all and everyone of every time peroid and of every age. Each week there will be a focus on an artist. We pay homage the great and late ones. May there music continue to spread. Our goal is to spread the wonderful music of Jazz to everyone even if you're not from queens. </p>
+
+
+
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 3000);
+}
+
+function changeBackground() {
+
+    var text = document.getElementById("para").style.backgroundColor = "blue";
+    
+   
+}
+
+function backToNormal() {
+
+    var text = document.getElementById("para").style.backgroundColor = "";
+    
+   
+}
+</script>
+
+
+
+</body>
+
+
+
+
+
+</html>

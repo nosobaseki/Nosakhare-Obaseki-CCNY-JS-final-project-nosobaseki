@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Jazz Club</title>
+<link href="site.css" rel="stylesheet">
+</head>
+<style>body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the chat form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}</style>
+<body>
+	
+<nav>
+	<a href = "index.html">Home</a> &nbsp;
+	<a href ="music.html">Music</a>&nbsp;
+	<a href = "soulfood.html">Services</a> &nbsp;
+	<a href ="contact.html">Contact</a>&nbsp;
+	
+</nav>
+
+<div>
+  <img class="mySlides" src="images/image2.jpg" style="width:100%">
+  <img class="mySlides" src="images/image3.jpg" style="width:100%">
+  <img class="mySlides" src="images/image4.jpg" style="width:100%">
+  <img class="mySlides" src="images/image15.jpg" style="width:100%">
+  <img class="mySlides" src="images/image16.jpg" style="width:100%">
+  <img class="mySlides" src="images/image17.jpg" style="width:100%">
+</div>
+<h1>Nosoul Presents</h1>
+<h1> The Smooth</h1>
+<p> Welcome to the smooth where we try to have a great time enjoying jazz and soon some soul food, see next page for further details. We are located in the soul of New York in Queens.All we ask is for you to bring your ears and your money and it's going to be a great time.We are more than happy to address any questions or concerns you have. We have chat representatives from 2PM-11PM ready to meet your needs. Also for prospective performers please feel free to reach us through our chat window below for the quickest response. </p>
+
+<h2>Smooth Jazz</h2>
+<p>Click on the button at the bottom of this page to open the chat form.</p>
+
+
+<button class="open-button" onclick="openForm()">Chat</button>
+
+<div class="chat-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Chat</h1>
+
+    <label for="msg"><b>Message</b></label>
+    <textarea placeholder="Type message.." name="msg" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+}
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(carousel, 3000);
+}
+
+</script>
+
+<h3> Some Famous Guest include</h3>
+<ul>
+  <li>Esperanza Splading</li>
+  	<img src="images/image11.jpg" height="500" width="500" alt="Esperanza Spalding">
+  <li>Tony Bennett</li>
+  <img src="images/image12.jpeg" height="500" width="500" alt="Tony Bennett">
+<li>Robert Glasper</li>
+<img src="images/image13.jpg" height="500" width="500" alt="Robert Glasper">
+<li>Norah Jones</li>
+<img src="images/image26.jpg" height="500" width="500" alt="Norah Jones">
+
+</ul>
+
+ <p style="font-size:2em">So join us for a night of fun and great music<p><br>
+
+</body>	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
